@@ -1,0 +1,29 @@
+{
+  "name": "dns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/http-server.js",
+  "scripts": {
+    "dev": "tsc",
+    "build": "tsc",
+    "start": "npm run build && node dist/http-server.js",
+    "dns": "npm run build && node dist/dns-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/dns-packet": "^5.6.5",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "dns-packet": "^5.6.1",
+    "express": "^5.1.0",
+    "redis": "^5.8.0"
+  }
+}

@@ -67,3 +67,48 @@ Expected output (if record exists):
 ```
 example.com.    300    IN    A    127.0.0.1
 ```
+
+
+
+## **DNS Query Structure :** 
+```
++-------------------+
+| Header            |
+| ID: 0x1234        |
+| Flags: QR=0, RD=1 |
+| QDCOUNT: 1        |
+| ANCOUNT: 0        |
+| NSCOUNT: 0        |
+| ARCOUNT: 0        |
++-------------------+
+| Question          |
+| QNAME: google.com |
+| QTYPE: A          |
+| QCLASS: IN        |
++-------------------+
+```
+## **DNS Response Structure :** 
+```
++-------------------+
+| Header            |
+| ID: 0x1234        |
+| Flags: QR=1, AA=1 |
+| QDCOUNT: 1        |
+| ANCOUNT: 1        |
+| NSCOUNT: 0        |
+| ARCOUNT: 0        |
++-------------------+
+| Question          |
+| QNAME: google.com |
+| QTYPE: A          |
+| QCLASS: IN        |
++-------------------+
+| Answer            |
+| NAME: google.com  |
+| TYPE: A           |
+| CLASS: IN         |
+| TTL: 300          |
+| RDLENGTH: 4       |
+| RDATA: 142.250.74.14 |
++-------------------+
+```
